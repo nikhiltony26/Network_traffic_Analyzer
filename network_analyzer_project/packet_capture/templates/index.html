@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Analyzer</title>
+</head>
+
+<body>
+
+    <h1>Network Analyzer</h1>
+
+    <p>This is a simple network analyzer tool. Click the button below to start capturing packets.</p>
+
+    <form action="{% url 'start_capture' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Start Capture</button>
+    </form>
+
+</body>
+
+</html>
